@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameSimulation Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+            document.body.style.color = color === 'black' ? 'white' : 'black';
+        }
+    </script>
+</head>
+<body>
+  <button onclick="changeBackground('black')">Dark theme</button>
+  <button onclick="changeBackground('white')">Light theme</button>
+
+  <h1>How to Create a GameSimulation-Based Engine</h1>
+
+  <p>
+    The <strong>GameSimulation</strong> framework is designed to be a lightweight platform for building 2D game engines, similar to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=20914">XNA</a> but in Python. Here's a guide on how to get started.
+  </p>
+
+  <h2>1. Create Your GameSimulation Class</h2>
+  <p>
+    To create your game, you need to create a subclass of <code>GameSimulation</code>, which serves as the core of the game engine. Below is a basic example:
+  </p>
+
+  <pre>
+class MyGame(GameSimulation):
+    def load_content(self):
+        game_scene = GameScene()
+        player = GameObject(100, 100, 50, 50, (255, 0, 0))
+        game_scene.add_object(player)
+        self.add_scene("main", game_scene)
+        self.switch_scene("main")
+
+    def update(self, dt):
+        pass
+
+    def draw(self):
+        pass
+
+if __name__ == "__main__":
+    game = MyGame(800, 600, "My Game Engine")
+    game.run()
+  </pre>
+
+  <h2>2. Creating Scenes</h2>
+  <p>
+    The <code>Scene</code> class represents different parts of your game, such as levels or menus. Each scene can have its own objects, update logic, and drawing routines. Here's an example of a basic scene:
+  </p>
+
+  <pre>
+class GameScene(Scene):
+    def __init__(self):
+        super().__init__()
+
+    def handle_events(self, event):
+        pass
+
+    def update(self, dt):
+        for obj in self.objects:
+            obj.update(dt)
+
+    def draw(self, screen):
+        screen.fill((0, 0, 0))
+        for obj in self.objects:
+            obj.draw(screen)
+  </pre>
+
+  <h2>3. Adding Game Objects</h2>
+  <p>
+    The <code>GameObject</code> class represents elements in your game world, such as players, enemies, or items. You can create custom game objects by extending this class:
+  </p>
+
+  <pre>
+class GameObject:
+    def __init__(self, x, y, width, height, color):
+        self.rect = pygame.Rect(x, y, width, height)
+        self.color = color
+
+    def update(self, dt):
+        pass
+
+    def draw(self, screen):
+        pygame.draw.rect(screen, self.color, self.rect)
+  </pre>
+
+  <h2>4. Running the Game</h2>
+  <p>
+    After creating your game, scenes, and objects, you can run the game by calling the <code>run</code> method of your <code>GameSimulation</code> subclass:
+  </p>
+
+  <pre>
+if __name__ == "__main__":
+    game = MyGame(800, 600, "My Game Engine")
+    game.run()
+  </pre>
+
+  <h2>5. Scene Management</h2>
+  <p>
+    You can switch between scenes during the game using the <code>switch_scene()</code> method. Here's how to add and switch scenes:
+  </p>
+
+  <pre>
+game_scene = GameScene()
+self.add_scene("main", game_scene)
+self.switch_scene("main")
+  </pre>
+
+  <h2>6. Event Handling</h2>
+  <p>
+    To handle events such as key presses or mouse movements, implement the <code>handle_events</code> method in your scene:
+  </p>
+
+  <pre>
+def handle_events(self, event):
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_SPACE:
+            print("Space key pressed")
+  </pre>
+
+  <p>
+    This provides a basic structure for creating games using the <strong>GameSimulation</strong> framework. Expand it by adding features like animations, physics, and networking as needed.
+  </p>
+</body>
+</html>
