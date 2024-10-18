@@ -2,11 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="GameSimulation-Engine",
-    version="SDK1.0",
+    version="1.0",
     packages=find_packages(),
     install_requires=[
         'Pygame>=2.6.1'
-        'ABC>=2.0.0'
     ],
     author="FedotovDev",
     author_email="email@example.com",
