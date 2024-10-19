@@ -4,10 +4,8 @@
 
 ## Installing
 
-You can install package `pip`:
-```bash
-pip install GameSimulation-engine
-```
+You can't install package with `pip` now. To install it, download it from releases on GitHub.
+
 # Using
 
 Simple using example:
