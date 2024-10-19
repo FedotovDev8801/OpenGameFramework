@@ -38,3 +38,10 @@ If you have issues or troubles, create issue on GitHub.
 ## License
 
 This project is licensed by MIT. You can find more in LICENSE file.
+
+## Social Media
+
+GameSimulation web-site:
+    https://fedotovdev8801.github.io/GameSimulation-Site/
+FedotovDev Patreon:
+    https://www.patreon.com/FedotovDev8801
