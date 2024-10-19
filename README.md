@@ -43,5 +43,6 @@ This project is licensed by MIT. You can find more in LICENSE file.
 
 GameSimulation web-site:
     https://fedotovdev8801.github.io/GameSimulation-Site/
+
 FedotovDev Patreon:
     https://www.patreon.com/FedotovDev8801
