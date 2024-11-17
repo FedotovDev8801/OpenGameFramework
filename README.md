@@ -1,5 +1,4 @@
 ![GAMESIM ICON](icon.png)
-
 # GameSimulation
 
 `GameSimulation-Engine` is Python-library for game developing or education for game developers.
