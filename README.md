@@ -5,7 +5,7 @@
 
 ## Installing
 
-You can install this library with `pip` here:
+You can install this library using `pip`:
 
 ```python
 pip install https://github.com/FedotovDev8801/GameSimulation
