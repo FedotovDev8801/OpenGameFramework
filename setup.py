@@ -6,6 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'Pygame>=2.6.1'
+        'PyInstaller>=1.0'
     ],
     author="FedotovDev",
     author_email="email@example.com",
