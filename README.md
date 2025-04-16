@@ -1,14 +1,14 @@
 ![GAMESIM ICON](icon.png)
-# GameSimulation
+# OGF
 
-`GameSimulation-Engine` is Python-library for game developing or education for game developers.
+`OpenGameFramework` is Python-library for game developing or education for game developers.
 
 ## Installing
 
 You can install this library using `pip`:
 
 ```python
-pip install https://github.com/FedotovDev8801/GameSimulation
+pip install https://github.com/FedotovDev8801/OpenGameFramework
 ```
 
 # Using
